@@ -88,13 +88,13 @@ def save_new_name(message):
     func=lambda message: message.text == "📚 دانانی ژمارەی خوێندنەوەی لاپەڕەی هەفتە"
 )
 def check_time_and_limit(message):
-  now = datetime.datetime.now()
+ now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=3)))
   current_day = now.strftime("%A")
   current_hour = now.hour
   current_date_str = now.strftime("%Y-%m-%d")
 
   # لێرەدا کاتەکە کراوە بۆ ڕۆژی دووشەممە لە کاتژمێر ٦ی بەیانی تا ٤ی عەسر (16:00)
-  if current_day != "Monday" or not (9 <= current_hour < 16):
+  if current_day != "Monday" or not (6 <= current_hour < 16):
     bot.send_message(
         message.chat.id,
         "❌ ببوورە، تەنها لە ڕۆژانی **دووشەممە** لە کاتژمێر **٦ی بەیانی تا ٤ی"
