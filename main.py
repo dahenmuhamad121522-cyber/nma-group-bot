@@ -89,7 +89,7 @@ def save_new_name(message):
 )
 def check_time_and_limit(message):
  now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=3)))
-  current_day = now.strftime("%A")
+ current_day = now.strftime("%A")
   current_hour = now.hour
   current_date_str = now.strftime("%Y-%m-%d")
 
