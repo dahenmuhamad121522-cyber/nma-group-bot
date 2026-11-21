@@ -93,8 +93,8 @@ def check_time_and_limit(message):
   current_hour = now.hour
   current_date_str = now.strftime("%Y-%m-%d")
 
-  # لێرەدا کاتەکە کراوە بۆ ڕۆژی دووشەممە لە کاتژمێر ٩ی بەیانی تا ٧ی ئێوارە (19:00)
-  if current_day != "Monday" or not (9 <= current_hour < 19):
+  # لێرەدا کاتەکە کراوە بۆ ڕۆژی دووشەممە لە کاتژمێر ٦ی بەیانی تا ٤ی عەسر (16:00)
+  if current_day != "Monday" or not (9 <= current_hour < 16):
     bot.send_message(
         message.chat.id,
         "❌ ببوورە، تەنها لە ڕۆژانی **دووشەممە** لە کاتژمێر **٦ی بەیانی تا ٤ی"
